@@ -31,7 +31,6 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("Facebook", "steve", "stevey", "steve244")
         test_user.save_user()
-
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list), 1)
 
@@ -39,16 +38,13 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("Facebook", "steve", "stevey", "steve254")
         test_user.save_user()
-
         found_user = User.find_by_user_name("stevey")
-
         self.assertEqual(found_user.user_name, test_user.user_name)
 
     def test_user_exists(self):
         self.new_user.save_user()
         test_user = User("Facebook", "steve", "stevey", "steve254")
         test_user.save_user()
-
         user_exists = User.user_exist("stevey")
 
         self.assertTrue(user_exists)
@@ -59,7 +55,6 @@ class TestUser(unittest.TestCase):
     def test_copy_password(self):
         self.new_user.save_user()
         User.copy_password("")
-
         self.assertEqual(self.new_user.password, pyperclip.paste())
 
 

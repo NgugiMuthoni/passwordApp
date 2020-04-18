@@ -67,7 +67,7 @@ def main():
         short_code = input().lower()
 
         if short_code == 'su':
-            print("Create a Pass Word Locker Account")
+            print("Create a PassWord Locker Account")
             print("_" * 100)
             account = input('Account name:')
             print('\n')

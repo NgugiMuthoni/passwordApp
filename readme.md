@@ -9,7 +9,7 @@
 # Setup Instructions
 - clone this repository
 
-- have python3.6 on your device
+- have python3 and higher on your device
 
 - Run application in your terminal using ./run.py
 
